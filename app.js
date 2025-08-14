@@ -27,7 +27,25 @@
 
 // func();
 
-import yargs from "yargs";
+// import yargs from "yargs";
 
-const { argv } = yargs(process.argv.slice(2));
-console.log("Command line arguments:", argv);
+// const { argv } = yargs(process.argv.slice(2));
+// console.log("Command line arguments:", argv);
+
+import express from "express";
+import movies from "./movies.js";
+
+const app = express();
+const PORT = 3000;
+
+app.get("/", (req, res) => {
+  res.send("Welcome to the Movie API");
+});
+
+app.get("/movies", (req, res) => {
+  res.json(movies);
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
