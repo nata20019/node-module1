@@ -33,19 +33,26 @@
 // console.log("Command line arguments:", argv);
 
 import express from "express";
-import movies from "./movies.js";
+import { movies } from "./movies.js";
 
 const app = express();
 const PORT = 3000;
 
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
+
 app.get("/", (req, res) => {
+  console.log(req.url);
+  console.log(req.method);
   res.send("Welcome to the Movie API");
 });
 
 app.get("/movies", (req, res) => {
-  res.json(movies);
-});
-
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  // res.send(movies);
+  res.status(200).json({
+    status: 200,
+    message: "Successfully patched a contact!",
+    data: movies,
+  });
 });

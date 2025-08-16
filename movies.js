@@ -1,17 +1,43 @@
 [
   {
-    "id": 1,
-    "name": "module1",
-    "version": "1.0.0"
+    id: "u9kgwNWGi3uUUwh0b8V49",
+    title: "Eloquent JavaScript, Third Edition",
+    author: "Marijn Haverbeke",
   },
   {
-    "id": 2,
-    "name": "module2",
-    "version": "2.0.0"
+    id: "YxhM4QDxPeA3SmPHcEZPJ",
+    title: "Practical Modern JavaScript",
+    author: "Nicolas Bevacqua",
   },
   {
-    "id": 3,
-    "name": "module3",
-    "version": "3.0.0"
-  }
-]
+    id: "zCd_RioNMOBaQwAXnc8Px",
+    title: "Understanding ECMAScript 6",
+    author: "Nicholas C. Zakas",
+  },
+  {
+    id: "ck89qe3HriUDHe09TBoJ8",
+    title: "Speaking JavaScript",
+    author: "Axel Rauschmayer",
+  },
+  {
+    id: "e1Tpn_I3wBkLREY6wG0lb",
+    title: "Learning JavaScript Design Patterns",
+    author: "Addy Osmani",
+  },
+  {
+    id: "Op8ApLTY0-Vn2cR0vDIwG",
+    title: "You Don't Know JS Yet",
+    author: "Kyle Simpson",
+  },
+  {
+    id: "dkJSszfrRVtLVR_MfRqcu",
+    title: "Pro Git",
+    author: "Scott Chacon and Ben Straub",
+  },
+  {
+    id: "CTHE0f1kkWwqS5sL2tI8_",
+    title: "Rethinking Productivity in Software Engineering",
+    author: "Caitlin Sadowski, Thomas Zimmermann",
+  },
+];
+// export default movies;
