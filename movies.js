@@ -1,4 +1,4 @@
-[
+export const movies = [
   {
     id: "u9kgwNWGi3uUUwh0b8V49",
     title: "Eloquent JavaScript, Third Edition",
