@@ -1,4 +1,4 @@
-export const movies = [
+const movies = [
   {
     id: "u9kgwNWGi3uUUwh0b8V49",
     title: "Eloquent JavaScript, Third Edition",
@@ -40,4 +40,4 @@ export const movies = [
     author: "Caitlin Sadowski, Thomas Zimmermann",
   },
 ];
-// export default movies;
+export default movies;

@@ -33,26 +33,49 @@
 // console.log("Command line arguments:", argv);
 
 import express from "express";
-import { movies } from "./movies.js";
+import cors from "cors";
+// import { movies } from "./movies.js";
+import moviesRouter from "./routes/api/movies-router.js";
 
 const app = express();
+app.use(cors());
+app.use("/api/movies", moviesRouter);
+
 const PORT = 3000;
+
+// const corsMiddleware = cors({
+//   origin: "http://localhost:3000",
+//   methods: ["GET", "POST", "PUT", "DELETE"],
+//   allowedHeaders: ["Content-Type", "Authorization"],
+// });
+
+// app.use(corsMiddleware);
+
+// app.use((req, res, next) => {
+//   console.log("Request received at:", new Date().toISOString());
+//   next();
+// });
+
+// app.get("/", (req, res) => {
+//   console.log(req.url);
+//   console.log(req.method);
+//   res.send("Welcome to the Movie API");
+// });
+
+// app.get("/movies", (req, res) => {
+//   res.send(movies);
+//   // res.status(200).json({
+//   //   status: 200,
+//   //   message: "Successfully patched a contact!",
+//   //   data: movies,
+//   // });
+// });
+
+// app.use((req, res) => {
+//   res.status(404).send("Page not found");
+//   // res.status(404).json({ message: "Page not found" });
+// });
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
-});
-
-app.get("/", (req, res) => {
-  console.log(req.url);
-  console.log(req.method);
-  res.send("Welcome to the Movie API");
-});
-
-app.get("/movies", (req, res) => {
-  // res.send(movies);
-  res.status(200).json({
-    status: 200,
-    message: "Successfully patched a contact!",
-    data: movies,
-  });
 });
